@@ -1,0 +1,24 @@
+.label {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5em;
+}
+.label .input-group {
+  margin-bottom: 1em;
+  display: flex;
+  align-items: center;
+  column-gap: 1em;
+}
+.label .input-group button svg {
+  width: 2em;
+  height: 2em;
+  transition: .3s;
+}
+.label .input-group button:hover svg {
+  fill: var(--primary-400);
+}
+.error {
+  color: var(--error);
+}

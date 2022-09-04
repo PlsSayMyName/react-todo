@@ -1,0 +1,67 @@
+.item,
+.compl-active,
+.fav-active {
+  position: relative;
+  display: flex;
+  column-gap: .5em;
+  border: 1px solid var(--black-800);
+  border-radius: 1em;
+  padding: .5em .2em;
+  justify-content: space-between;
+  transition: .3s;
+}
+.compl-active {
+  border-color: var(--done);
+}
+.fav-active {
+  border-color: var(--like);
+}
+.menu {
+  width: 24px;
+  height: 24px;
+}
+.item p,
+.compl-active p,
+.fav-active p {
+  word-break: break-word;
+  font: var(--text-normal-default);
+  color: var(--black-500);
+}
+.btn-group {
+  display: flex;
+  flex-direction: column;
+}
+.menu,
+.btn-group button:not(:nth-child(2), :last-child) {
+  margin-bottom: .2em;
+}
+.btn-group button:nth-child(1){
+  order: 1;
+}
+.btn-group button:nth-child(2){
+  order: 3;
+}
+.btn-group button:nth-child(3){
+  order: 2;
+}
+.btn-group button:nth-child(4){
+  order: 4;
+  margin-top: auto;
+}
+.btn-group button:nth-child(4) svg {
+  fill: var(--error);
+}
+.fav-icon {
+  fill: var(--like);
+}
+.compl-icon {
+ fill: var(--done);
+}
+button svg {
+  width: 1.5em;
+  height: 1.5em;
+  transition: .3s;
+}
+button:hover svg {
+  transform: scale(1.2);
+}

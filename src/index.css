@@ -1,0 +1,179 @@
+@font-face {
+  font-family: 'Inter';
+  src: url('./fonts/Inter-r.woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('./fonts/Montserrat-b.woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* Colors */
+  --primary-900: hsla(16, 96%, 36%, 1);
+  --primary-800: hsla(17, 87%, 41%, 1);
+  --primary-700: hsla(17, 79%, 46%, 1);
+  --primary-600: hsla(17, 75%, 52%, 1);
+  --primary-500: hsla(17, 84%, 57%, 1);
+  --primary-400: hsla(18, 84%, 61%, 1);
+  --primary-300: hsla(20, 100%, 70%, 1);
+  --primary-200: hsla(23, 100%, 77%, 1);
+  --primary-100: hsla(25, 100%, 85%, 1);
+  --primary-50: hsla(29, 100%, 95%, 1);
+
+  --black-900: hsla(243, 29%, 13%, 1);
+  --black-800: hsla(243, 17%, 21%, 1);
+  --black-700: hsla(244, 11%, 30%, 1);
+  --black-600: hsla(244, 8%, 40%, 1);
+  --black-500: hsla(244, 6%, 55%, 1);
+  --black-400: hsla(240, 5%, 68%, 1);
+  --black-300: hsla(246, 5%, 75%, 1);
+  --black-200: hsla(248, 6%, 85%, 1);
+  --black-100: hsla(240, 6%, 90%, 1);
+  --black-50: hsla(240, 6%, 95%, 1);
+  --black-20: hsla(240, 11%, 98%, 1);
+
+  --theme-divider: hsla(240, 6%, 90%, 1);
+
+  --like: hsla(349, 60%, 48%, 1);
+  --error: hsl(349, 91%, 52%);
+  --done: hsla(100, 77%, 44%, 1);
+
+  --white: hsla(0, 0%, 100%, 1);
+  --black: hsla(0, 0%, 0%, 1);
+
+  /* Fonts */
+  --header-1: 700 3rem/3.75rem 'Montserrat', sans-serif;
+  --header-2: 700 1.2rem/1.5rem 'Montserrat', sans-serif;
+
+  --text-big-default: 400 1rem/1.5rem 'Inter', sans-serif;
+
+  --text-normal-default: 400 0.875rem/1.5rem 'Inter', sans-serif;
+
+  --text-small-default: 400 0.75rem/0.75rem 'Inter', sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  color: var(--primary-800);
+  box-sizing: border-box;
+  font: var(--text-big-default);
+  -webkit-tap-highlight-color: hsla(0, 0%, 0%, 0);
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: unset;
+}
+textarea,
+input[type="text"] {
+  border-radius: 0.5em;
+  border: 1px solid hsl(214, 13%, 90%);
+  font-size: 0.875rem;
+  line-height: 1.25em;
+  font-weight: 400;
+  color: hsla(243, 29%, 13%, 0.7);
+  background: var(--white);
+}
+textarea {
+	-webkit-appearance: none;
+	resize: none;
+	min-height: 10em;
+	max-height: 10em;
+  padding: .5em 1em;
+  width: 30em;
+}
+
+input::placeholder {
+  color: hsla(243, 29%, 13%, 0.7);
+}
+
+input[placeholder] {
+  text-overflow: ellipsis;
+}
+
+::-webkit-input-placeholder {
+  font: var(--text-normal-default);
+  color: var(--black-700);
+}
+
+:-webkit-autofill {
+  box-shadow: inset 0 0 0 50px hsl(0, 0%, 97%) !important;
+}
+
+:focus::-webkit-input-placeholder {
+  color: transparent;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+::-moz-selection {
+  background-color: hsla(51, 23%, 11%, 0.7);
+  color: var(--white);
+}
+
+::selection {
+  background-color: hsla(51, 23%, 11%, 0.7);
+  color: var(--white);
+}
+
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  transition: .2s;
+}
+
+button.btn,
+a.btn {
+  border-radius: .5em;
+  padding: .5em .95em;
+  font: var(--text-normal-default);
+  color: var(--white);
+  border: 1px solid transparent;
+  background: var(--primary-800);
+  cursor: pointer;
+  transition: .2s;
+  height: 2.5em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  font: var(--header-1);
+  color: var(--primary-900);
+  margin-bottom: .7em;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 76.5em;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1280px) {
+  .wrapper {
+      padding-left: 1.25em;
+      padding-right: 1.25em;
+  }
+}

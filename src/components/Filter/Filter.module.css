@@ -1,0 +1,20 @@
+.filter {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+  border-bottom: 1px solid var(--theme-divider);
+}
+.filter button {
+  border: 1px solid var(--primary-400);
+  padding: .5em 2em;
+}
+.filter button:not(.active):hover {
+  background: var(--primary-400);
+  color: var(--white);
+
+}
+.filter button.active {
+  background: var(--primary-700);
+  color: var(--white);
+}
